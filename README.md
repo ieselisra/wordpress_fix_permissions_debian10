@@ -22,3 +22,13 @@ The Script will ask for:
 2. Desired "owner:user" ("www-data" by default, typing y or leaving it blank)
 
 That was all!  
+
+
+## Extra Tip
+Maybe you need to add something like this to your "/etc/apache2/apache2.conf"
+
+  <Directory /home/mydomain/public_html/>
+      Options Indexes FollowSymLinks
+      AllowOverride None
+      Require all granted
+  </Directory>
